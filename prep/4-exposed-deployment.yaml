@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: nginx
@@ -15,3 +15,5 @@ spec:
       containers:
       - image: nginx
         name: nginx
+        ports:
+          - containerPort: 80
